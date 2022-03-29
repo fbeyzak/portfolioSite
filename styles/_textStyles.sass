@@ -1,0 +1,28 @@
+
+@import "./_colors"
+
+$font_body : 'Barlow', sans-serif
+$font_title :  'Quicksand', sans-serif
+
+$size : 1rem
+$page_title_font_size : 2rem
+
+@mixin text_body($size: 1rem)
+    font-family: $font_body
+    font-size: $size
+    color: $color_text
+
+@mixin page_title
+    font-family: $font_title
+    font-size: $page_title_font_size
+    color: $color_text
+
+@mixin text_title
+    font-family: $font_title
+    font-size: $size
+    color: $color_text
+    
+a:hover
+         color: $color_accent
+
+    

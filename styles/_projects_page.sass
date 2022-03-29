@@ -1,0 +1,142 @@
+@import "./_flexbox"
+@import "./_textStyles"
+
+$nav_bar_width: 4px
+
+  
+    
+
+
+.gallery_container
+    width: 100%
+    padding: 5% 5%
+    background-color: $blue_tint
+    position: relative
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21), 0px 1px 1px rgba(0, 0, 0, 0.07)
+    border-radius: $radius
+    margin-top: 5%
+    
+
+.projects_container
+    
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+.projects_navigation
+    
+    width: 100%
+    @include flex(center , space-between , row)
+    position: absolute
+    top: -5vh
+    left: 0
+
+.projects_navigation_bar
+    width: 100%
+    height: $nav_bar_width
+    position: absolute
+    top: - $nav_bar_width
+    
+
+
+#active_bar_field
+    background-color: $color_accent
+    height: 100%
+    width: 20%
+    position: relative
+    left: 5%
+    border-radius: 200px
+
+.project_field
+    width: 30%
+    text-align: center
+
+.project_gallery
+
+    height: 100%
+    width: 100%
+    
+.slider
+
+    @include flex(flex-starts , flex-start , row)
+    flex-wrap: nowrap
+    position: relative
+    right: 0
+
+    transition: position .5s
+
+
+// add position: relative; top: -50%; to scroll dow for overflow
+.project_gallery [class$="_projects"]
+    @include flex(space-between , space-between , row)
+    flex-wrap: wrap
+    height: 100%
+    min-width: 100%
+    overflow: hidden
+.project_info
+    min-width: 130px
+    margin-bottom: 1rem
+    
+.project_tile
+    width: 30%
+    margin-bottom: 5%
+    @include flex(flex-start, space-between , row)
+    flex-wrap: wrap-reverse
+    
+.project_tile img
+    width: 100%
+    margin-right: 10px
+    height: auto
+    object-fit: cover
+
+.project_title
+    margin-bottom: 10px
+    font-family: $font_title
+.project_description
+    font-size: .8rem
+    
+@media screen and (max-width:$small_desktop) 
+    .project_tile
+        flex-wrap: wrap-reverse
+    .gallery_container
+        margin-top: 10%
+        height: auto
+
+@media screen and (max-width:$mobile) 
+    .gallery_container
+        margin-top: 70px
+
+    .project_gallery [class$="_projects"]
+        @include flex(space-between , space-between , column)
+
+    .project_tile
+        width: 100%  
+        margin-bottom: 2rem
+    .project_tile img
+        width: 100%
+        height: auto
+/*
+    
+    <div class="projects_container">
+                    <div class="projects_navigation">
+                        <div class="project_field">
+                            <h3>Software</h3>
+                        </div>
+                        <div class="project_field">
+                            <h3>Web Design</h3>
+                        </div>
+                        <div class="project_field">
+                            <h3>Illustration</h3>
+                        </div>
+                    </div>
+
+                    <div class="project_gallery">
+                        <img src=" https://picsum.photos/200/200?grayscale" alt="project">
+                         <img src=" https://picsum.photos/200/200?grayscale" alt="project">
+                         <img src=" https://picsum.photos/200/200?grayscale" alt="project">
+                         <img src=" https://picsum.photos/200/200?grayscale" alt="project">
+                         <img src=" https://picsum.photos/200/200?grayscale" alt="project">
+                         <img src=" https://picsum.photos/200/200?grayscale" alt="project">
+                    </div>
+                </div>
+     */

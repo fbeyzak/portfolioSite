@@ -1,0 +1,98 @@
+.icons i {
+  font-size: 1.7rem;
+}
+
+i:hover {
+  color: #0075E0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 750px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 3rem;
+  border-radius: 8px;
+  color: #292A2A;
+  margin-bottom: 2rem;
+}
+
+#projectsButton {
+  width: 55%;
+  height: 3rem;
+  min-width: 200px;
+  background-color: #0075E0;
+  color: #FFFFFC;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  border-radius: 8px;
+}
+
+#projectsButton:hover, #dowloadCVButton:hover, div[class$=button]:hover {
+  transition: transform 0.5s;
+  transform: scale(1.1, 1.1);
+  transform-origin: left;
+}
+
+#projectsButton:hover, .send_message_button {
+  background-color: #148fff;
+}
+
+#dowloadCVButton {
+  position: relative;
+  justify-content: space-between;
+  width: 35%;
+  max-width: 200px;
+  height: 3rem;
+  min-width: 140px;
+  border: 2px solid #292A2A;
+  background-color: inherit;
+}
+
+.button_text {
+  padding: 0 0.7rem;
+  text-align: center;
+  width: 100%;
+}
+
+.icon {
+  stroke: #292A2A;
+  stroke-width: 7;
+  fill: none;
+}
+
+#downloadIcon {
+  background-color: #292A2A;
+  stroke: #FFFFFC;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 8px 0 0 8px;
+  padding: 0.7rem;
+  width: auto;
+  position: relative;
+  left: -2px;
+}
+
+@media screen and (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  #projectsButton, #dowloadCVButton {
+    width: 100%;
+  }
+
+  #projectsButton:hover {
+    transform: scale(1, 1);
+  }
+}

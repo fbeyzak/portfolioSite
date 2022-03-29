@@ -1,0 +1,133 @@
+@charset "UTF-8";
+#contact_page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+#contact_main {
+  width: 50%;
+  height: 100%;
+}
+
+#contact_side {
+  position: relative;
+  width: 30%;
+  min-width: 300px;
+  height: 100%;
+  @änclude flex(center , flex-end , column);
+  overflow: hidden;
+}
+
+.contact_me_form {
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2E3132;
+  padding: 50px;
+  border-radius: 8px;
+}
+.contact_me_form * {
+  font-size: 0.8rem;
+}
+.contact_me_form label {
+  color: #FFFFFC;
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.contact_me_form input {
+  width: 70%;
+  background-color: rgba(206, 216, 226, 0.15);
+  border: none;
+  border-radius: 8px;
+  padding: 4px;
+  height: 30px;
+  margin-bottom: 5%;
+  color: #FFFFFC;
+}
+.contact_me_form #form_mail {
+  width: 100%;
+}
+
+.contact_me_form::before {
+  content: "Send Me A Message";
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+#form_message {
+  resize: none;
+  background-color: rgba(206, 216, 226, 0.15);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  color: #FFFFFC;
+}
+
+.message_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 20%;
+}
+
+.delete_button {
+  width: 20%;
+  height: auto;
+  border: 2px #FFFFFC dashed;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.delete_button i {
+  color: #FFFFFC;
+  padding: 10px;
+}
+
+.send_message_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 75%;
+  background-color: #0075E0;
+  min-width: min-content;
+  color: #FFFFFC;
+  border-radius: 8px;
+  word-wrap: no-wrap;
+  padding: 0 20px 0 10px;
+  border: 2px solid #0075E0;
+}
+.send_message_button i {
+  color: #FFFFFC;
+  padding: 10px;
+}
+.send_message_button span {
+  color: #FFFFFC;
+}
+
+@media screen and (max-width: 600px) {
+  #contact_page {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  #contact_main {
+    width: 100%;
+  }
+
+  #contact_side {
+    width: 100%;
+    height: 80vh;
+  }
+}

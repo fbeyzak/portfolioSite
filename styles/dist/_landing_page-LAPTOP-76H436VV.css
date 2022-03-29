@@ -1,0 +1,181 @@
+a:hover {
+  color: #0075E0;
+}
+
+.icons i {
+  font-size: 1.7rem;
+}
+
+i:hover {
+  color: #0075E0;
+}
+
+#landing_page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#whoAmI {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#profile_container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hello {
+  font-size: 2rem;
+  line-height: 43px;
+}
+
+.name {
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.215em;
+}
+
+#name {
+  font-size: 1.2rem;
+}
+
+#nameDisplay {
+  font-size: 3rem;
+  line-height: 60px;
+  letter-spacing: 0.17em;
+  margin-bottom: 10%;
+}
+
+#profile_photo_mobile {
+  display: none;
+}
+
+.whoAmIText {
+  margin-bottom: 5%;
+  max-width: 750px;
+  word-wrap: break-word;
+}
+
+#profile_photo {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  min-width: 250px;
+  min-height: 250px;
+  position: relative;
+  top: -10%;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1100px) {
+  #profile_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+  }
+
+  #whoAmI {
+    width: 90%;
+  }
+
+  .icons {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #profile_container {
+    width: 50%;
+    max-width: 350px;
+  }
+
+  .header {
+    max-width: 50%;
+    margin-bottom: 10%;
+    top: -10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #landing_page {
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    align-items: flex-start;
+    overflow: visible;
+  }
+
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .header {
+    margin-bottom: 0;
+  }
+
+  #profile_container {
+    display: block;
+    position: absolute;
+    width: 30%;
+    right: -25%;
+    z-index: -1;
+  }
+
+  #profile_photo {
+    max-width: 100%;
+    position: absolute;
+    right: -20%;
+    top: -30%;
+    min-width: 68vw;
+    min-height: 68vw;
+  }
+
+  #whoAmI {
+    width: 100%;
+    position: relative;
+  }
+
+  .whoAmIText {
+    margin-top: 20px;
+    display: block;
+    word-break: break-word;
+  }
+
+  #nameDisplay {
+    width: 50%;
+    height: auto;
+    font-size: 2.8rem;
+  }
+
+  #landing_page .icons {
+    visibility: hidden;
+    position: absolute;
+    bottom: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 50vw;
+    transform: translate(-50%, 0);
+  }
+}

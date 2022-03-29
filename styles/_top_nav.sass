@@ -1,0 +1,104 @@
+@import "./_flexbox"
+@import "./_grid"
+@import "./_colors"
+@import "./_textStyles"
+@mixin burgerMenu()
+
+        .burger_menu_container
+            width: 3rem
+            height: 3rem
+            position: absolute
+            right: 0
+            top: 20%
+        
+        .burger_menu::after, .burger_menu::before
+            content: ""
+        .burger_menu , .burger_menu::after, .burger_menu::before
+            position: absolute
+            width: 2rem
+            height: 4px
+            background-color: $color_text
+            right: 0
+            top: 50%
+            border-radius: 50px
+        
+
+        .burger_menu::after
+            top: 10px
+        .burger_menu::before
+            top: -10px
+            
+        .burger_menu_container.active
+            
+            display: flex
+            position: relative
+            width:100vw
+            background-color: lighten($color_accent, 20% )
+            @include flex()
+
+            .burger_menu
+                transform: rotate(45deg)
+                position: relative
+                background-color: $color_background
+                top: 0
+                width: 1.5rem
+
+            .burger_menu::after
+                top: 0
+                transform: rotate(-270deg)
+                background-color: $color_background
+                width: 1.5rem
+            
+            .burger_menu::before
+
+                display: none
+     
+
+#top_nav
+    @include flex(center , center)
+    z-index: 2
+    transition: justify-content 1s
+
+#name
+    font-family: $font_title
+    font-weight: lighter
+    font-size: 1.2rem
+    letter-spacing: 0.215em
+    display: none
+    transition: display 5s
+   
+#nav_links
+
+    min-width: 300px
+    height: 100%
+    width: 30%
+    @include flex(center , space-between)
+
+.nav_link
+    @include text_title
+    
+@media screen and (max-width: $mobile) 
+
+    #top_nav
+        grid-area: 1/2/2/12
+        position: relative
+
+    @include burgerMenu()
+    
+    #name
+        position: relative
+        top: 10px
+    #nav_links
+        flex-direction: column
+        min-width: 0
+        
+        .nav_link
+            width: 100vw
+            padding: 10px 0
+            background: $color_accent
+            color: $color_background
+            @include flex()
+            border-bottom: 2px solid $color_background
+            border-radius: 2px
+            display: none
+        

@@ -1,0 +1,19 @@
+@import "./_styles_and_mixins"
+
+#side_nav
+    grid-area: 10/2/12/3
+    @include flex(flex-start,space-between,column)
+    z-index: 2
+    
+
+.side_circle
+   
+    width: .8rem
+    height: .8rem
+    border: 2px solid $black 
+    border-radius: 50%
+    padding: 5px
+    
+
+.side_circle.active
+    background-color: $black

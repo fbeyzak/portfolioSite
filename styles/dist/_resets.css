@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #292A2A;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFC;
+}

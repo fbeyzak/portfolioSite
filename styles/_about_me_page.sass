@@ -1,0 +1,130 @@
+@import ./_flexbox
+@import ./_colors
+
+#about_me_page
+
+    @include flex(flex-start , space-between , row)
+
+    #about_me_text
+        text-indent: 7%
+        margin-bottom: 10%
+
+    
+
+
+    #about_me_main
+        max-width: 70%
+        height: 100%
+
+    .gallery_container
+        
+
+        .projects_container
+            height: 100%
+
+           
+
+
+    .skillsAndEducation
+        height: 100%
+        @include flex( flex-start , space-between, column)
+    
+        div
+            @include flex(flex-start, flex-start ,row)
+            width: 100%
+             
+            margin-bottom: 1.5rem
+            
+            i 
+                padding: 5px
+            
+            h3
+                margin-right: 20px
+
+        
+            ul
+                @include flex(flex-start , space-between , row)
+                flex-wrap: wrap
+                width: 70%
+                
+                
+
+                li
+                
+                    width: 50%
+                    margin-bottom: 10px
+
+    #education ul , #certificates ul
+        flex-direction: column     
+
+        li
+            width: 100% 
+            
+            
+
+        h4
+            font-size: .9rem
+            margin-top: .5rem
+
+
+        .majors
+            @include flex(flex-start , flex-start  , column)
+            position: relative
+            left: 20%
+            margin-bottom: 10px
+
+
+    .skillsAndEducation .entry_title
+        width: 30%
+
+    #about_me_side
+        max-width: 20%
+       
+        @include flex(center, space-between , column)
+
+    #about_me_image_container
+
+        @include flex(center,center ,column )
+
+        img
+            width: 100%
+            min-width: 100px
+            height: auto
+            border-radius: 50%
+            margin-top: 10%
+        
+@media screen and (max-width: $tablet)
+    
+@media screen and (max-width: $tablet) 
+
+    #about_me_page
+
+        @include flex( center, flex-start , column)
+
+        #about_me_main
+            width: 100%
+            max-width: none
+        
+        #about_me_side
+            display: none
+
+        .gallery_container
+            margin-top: 20px
+           
+        .skillsAndEducation .skill-container
+            @include flex( flex-start, flex-start , column)
+
+            ul
+                width: 100%
+                margin: 0 auto
+                justify-content: flex-end
+            li
+                width: 80%
+
+        #education ul
+            flex-direction: row
+            li
+                width:80%
+        .skillsAndEducation .entry_title
+            width: 40%
+

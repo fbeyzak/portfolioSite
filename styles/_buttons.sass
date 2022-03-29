@@ -1,0 +1,88 @@
+@import "./_colors"
+@import "./_flexbox"
+@import "./_icon_styles"
+
+$button_radius: 8px
+
+@mixin button_hover_scale
+    transition: transform .5s
+    transform: scale( 1.1 , 1.1)
+    transform-origin: left
+
+
+
+.buttons
+    @include flex(center , space-between , row)
+    flex-wrap: wrap
+    width: 100%
+    max-width: 750px
+    
+
+.button
+
+    @include flex()
+    height: 3rem
+    border-radius: $button_radius
+    color: $color_text
+    margin-bottom: 2rem
+    
+
+
+#projectsButton
+
+    width: 55%
+    height: 3rem
+    min-width: 200px
+    background-color: $color_accent
+    color: $color_background
+    font-size: 1.1rem
+    line-height: 1.4rem
+    border-radius: $button_radius
+
+#projectsButton:hover , #dowloadCVButton:hover, div[class$="button"]:hover
+    
+    @include  button_hover_scale
+#projectsButton:hover , .send_message_button
+    background-color: lighten($color_accent, 10%)
+
+#dowloadCVButton
+
+    position: relative
+    justify-content: space-between
+    width: 35%
+    max-width: 200px
+    height: 3rem
+    min-width: 140px
+    border: 2px solid $color_text
+    background-color: inherit
+    
+  
+.button_text
+    padding: 0 .7rem
+    text-align: center
+    width: 100%
+
+.icon
+    @include generalStyle
+    
+
+#downloadIcon
+    background-color: $color_text
+    stroke: $color_background
+    height: 3rem
+    width: 3rem
+    border-radius: $button_radius 0 0 $button_radius 
+    padding: .7rem
+    width: auto  
+    position: relative
+    left: -2px
+    
+
+@media screen and (max-width: $mobile )
+    .buttons
+        flex-direction: column
+    #projectsButton , #dowloadCVButton
+        width: 100%
+        
+    #projectsButton:hover
+            transform: scale( 1 ,1)

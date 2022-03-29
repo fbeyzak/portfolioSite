@@ -1,0 +1,186 @@
+@import ./_flexbox
+@import ./_colors
+
+$border_radius_button:8px
+
+#contact_page
+    @include flex(flex-start , space-between , row) 
+    overflow: hidden
+
+    h5
+        font-size: 3rem
+        margin-bottom: 1rem
+#contact_main
+    width: 50%
+    height: 100%
+ 
+.socials
+    width: 100%
+    margin-top: 10%
+    @include flex( flex-start , space-between , row)
+    flex-wrap: wrap
+
+    .social_link
+        min-width: 200px
+        padding: 1rem
+        margin-bottom: 1rem
+        text-align: center
+        position: relative
+        border-bottom: 1px solid $color_text
+        
+      
+
+
+.social_link:hover 
+    
+    color: $color_accent
+    border-bottom: 1px solid $color_accent
+
+#contact_side
+    position: relative
+    width: 30%
+    min-width: 300px
+    height: 100%
+    @änclude flex(center , flex-end , column)
+    overflow: hidden
+    
+
+.contact_me_form
+    height: 90%
+    width: 100%
+    position: absolute
+    bottom: 0
+    right: 0
+    background-color: $black
+    padding: 50px
+    border-radius: $border_radius_button
+    
+   
+    
+    *
+        font-size: .8rem
+
+    label
+        color: $color_background
+        display: block
+        width: 100%
+        margin-bottom: 4px
+
+    input
+        width: 70%
+        background-color: $blue_tint
+        border: none
+        border-radius: $border_radius_button
+        padding: 4px 1rem
+        height: 30px
+        margin-bottom: 5%
+        color: $color_background
+    
+    #form_mail
+        width: 100%
+    
+  
+    
+.contact_me_form::before
+        content: "Send Me A Message"
+        position: absolute
+        top: -40px  
+        width: 100%
+        font-size: 1.5rem
+        text-align: center
+        left: 0
+        
+   
+#form_message
+    resize: none
+    background-color: $blue_tint
+    border: none
+    border-radius: $border_radius_button
+    width: 100%
+    padding: 1rem
+    color: $color_background
+
+.message_buttons
+    @include flex(center, space-between,row )
+    margin-top: 20%
+    
+.delete_button
+    width: 20%
+    height: auto
+    
+    border: 2px $color_background dashed
+    border-radius: $border_radius_button
+    @include flex()
+    
+    i
+        color: $color_background
+        padding: 10px
+
+
+
+.send_message_button
+    
+    @include flex(center, center , row)
+    width: 75%
+    background-color: $color_accent
+    min-width: min-content
+    color: $color_background
+    border-radius: $border_radius_button
+    word-wrap: no-wrap
+    padding: 0 20px 0 10px
+    border: 2px solid $color_accent
+
+   
+        
+    i
+        color: $color_background
+        padding: 10px
+        
+    
+    span
+        color: $color_background
+
+@media screen and (max-width : $tablet)
+
+    #contact_page
+        flex-direction: column
+        height: auto
+
+    #contact_main
+        width: 100%
+
+    #contact_side
+        height: 70vh
+        width: 100%
+    .socials
+        margin-bottom: 2rem
+
+@media screen and (max-width : $mobile)
+
+    #contact_page
+        flex-direction: column
+        overflow: visible
+        height: auto
+        
+
+    #contact_main
+        width:100%
+
+    #contact_side
+        width: 100%
+        height: 80vh
+        min-width: 200px
+    
+    .socials
+        justify-content: center
+        
+
+    #form_message
+
+        height: 50%
+
+    .contact_me_form
+        
+        padding: 50px 10%
+        border-radius: $border_radius_button
+    

@@ -1,0 +1,46 @@
+@import ./_flexbox
+@import ./_textStyles
+@import ./_colors
+#more_about_me
+    margin-bottom: 80px
+#more_about_me_title
+    margin-bottom: 1.5rem
+
+.get_to_know_me_section
+
+    @include flex( flex-start , space-between , column)
+    width: 80%
+    margin-bottom: 5%
+    h3
+        font-size: 1.5rem
+        display: block
+        font-family: $font_title
+        margin-bottom: 20px
+
+    p
+       
+        display: block
+        position: relative
+        left: 8%
+        line-height: 40px
+        padding: 1rem 2rem
+        border-radius: 8px
+        background-color: $blue_tint
+
+#i_value
+    
+    position: relative
+    left: 20%
+    width: 70%
+
+@media screen and (max-width: $mobile)
+
+    #i_value
+
+        left: 0
+        width: 100%
+
+    .get_to_know_me_section
+
+         width: 100%
+         margin-bottom: 50px
