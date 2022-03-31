@@ -46,7 +46,6 @@ a:hover {
   height: 100%;
   overflow: scroll;
   overflow-x: hidden;
-  overflow-x: visible;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -99,10 +98,6 @@ h2[id$=_title] {
   }
 }
 @media screen and (max-width: 768px) {
-  .displayScroll {
-    overflow-x: visible;
-  }
-
   #contact_page {
     flex-direction: column;
   }
