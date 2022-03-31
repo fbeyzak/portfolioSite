@@ -68,7 +68,7 @@ $nav_bar_width: 4px
 
 // add position: relative; top: -50%; to scroll dow for overflow
 .project_gallery [class$="_projects"]
-    @include flex(space-between , space-between , row)
+    @include flex(flex-start , space-between , row)
     flex-wrap: wrap
     height: 100%
     min-width: 100%
@@ -92,13 +92,13 @@ $nav_bar_width: 4px
 .project_title
     margin-bottom: 10px
     font-family: $font_title
+    font-weight: bold
     
 
 .project_description
     font-size: .8rem
 
-.entry_title
-    @include flex()   
+  
 @media screen and (max-width:$small_desktop) 
     .project_tile
         flex-wrap: wrap-reverse
