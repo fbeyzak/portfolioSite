@@ -46,6 +46,8 @@
                 @include flex(flex-start , space-between , row)
                 flex-wrap: wrap
                 width: 70%
+                position: relative
+                top: 30px
                 
                 
 
@@ -76,6 +78,22 @@
 
     .skillsAndEducation .entry_title
         width: 30%
+        @include flex(center , center , row)
+        
+    .skills_subtitle
+        position: relative
+        display: block
+
+    .skills_subtitle::after
+
+            content: ""
+            width: 100%
+            height: 1px
+            position: absolute
+            bottom: -5px
+            right: 0
+            background-color: $color_text
+            border-radius: 3000px
 
     #about_me_side
         max-width: 20%

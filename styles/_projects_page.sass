@@ -92,9 +92,13 @@ $nav_bar_width: 4px
 .project_title
     margin-bottom: 10px
     font-family: $font_title
+    
+
 .project_description
     font-size: .8rem
-    
+
+.entry_title
+    @include flex()   
 @media screen and (max-width:$small_desktop) 
     .project_tile
         flex-wrap: wrap-reverse
