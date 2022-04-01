@@ -900,6 +900,10 @@ a:hover {
     width: 40%;
   }
 }
+#about_me_page .skillsAndEducation div ul {
+  top: 0;
+}
+
 a:hover {
   color: #0075E0;
 }

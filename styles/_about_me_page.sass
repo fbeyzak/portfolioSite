@@ -111,8 +111,7 @@
             border-radius: 50%
             margin-top: 10%
         
-@media screen and (max-width: $tablet)
-    
+
 @media screen and (max-width: $tablet) 
 
     #about_me_page
@@ -133,9 +132,11 @@
             @include flex( flex-start, flex-start , column)
 
             ul
+                
                 width: 100%
                 margin: 0 auto
                 justify-content: flex-end
+                
             li
                 width: 80%
 
@@ -146,3 +147,6 @@
         .skillsAndEducation .entry_title
             width: 40%
 
+#about_me_page .skillsAndEducation div ul
+
+    top: 0

@@ -152,3 +152,6 @@
     width: 40%;
   }
 }
+#about_me_page .skillsAndEducation div ul {
+  top: 0;
+}
